@@ -22,7 +22,6 @@ Some of the topics I’ve learned or am currently learning include:
 - ⚙️ Node.js basics (built-in modules, file system, npm, and environment setup)
 - 🧠 Practice projects such as:
   - Simple CLI programs  
-  - Frequency distribution calculator  
   - Experiments using the `prompt` module  
   - And more!
 
