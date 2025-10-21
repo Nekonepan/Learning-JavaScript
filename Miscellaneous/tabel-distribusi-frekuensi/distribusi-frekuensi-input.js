@@ -32,10 +32,12 @@ rl.question("> ", (input) => {
   // ---------------------
 
   // JUMLAH KELAS (PAKAI RUMUS STURGES) -------
-  const k = Math.ceil(1 + 3.3 * Math.log10(n));
+  const kReal = 1 + 3.3 * Math.log10(n);
+  const k = Math.ceil(kReal);
 
   // ITERVAL KELAS ---------------------
-  const interval = Math.ceil(range / k);
+  const iReal = range / k;
+  const interval = Math.ceil(iReal);
 
   // KELAS BAWAH DIKURANGI 0.5, HITUNG FREKUENSI, DAN INTERVAL --------------
   const kelas = [];
@@ -53,22 +55,31 @@ rl.question("> ", (input) => {
     batasBawah = batasAtas;
   }
 
-  // Cetak hasil
   console.log("\n=== TABEL DISTRIBUSI FREKUENSI ===");
   console.log(`Jumlah data (n): ${n}`);
   console.log(`Data terkecil (min): ${min}`);
   console.log(`Data terbesar (max): ${max}`);
   console.log(`Range (R): ${range}`);
-  console.log(`Jumlah kelas (k): ${k}`);
-  console.log(`Interval kelas (i): ${interval}`);
+
+  console.log("\nLangkah-langkah perhitungan:");
+  console.log("1. Rumus jumlah kelas (Sturges): k = 1 + 3.3 * log10(n)");
+  console.log(`   → k = 1 + 3.3 * log10(${n})`);
+  console.log(
+    `   → k = 1 + 3.3 * ${Math.log10(n).toFixed(4)} = ${kReal.toFixed(4)}`
+  );
+  console.log(`   → Setelah dibulatkan → k = ${k}`);
+
+  console.log("\n2. Rumus interval kelas: i = R / k");
+  console.log(`   → i = ${range} / ${k} = ${iReal.toFixed(4)}`);
+  console.log(`   → Setelah dibulatkan → i = ${interval}`);
+
   console.log("\n| Interval Kelas   | Frekuensi |");
   console.log("|------------------|-----------|");
-
   kelas.forEach((kls) => {
     const intervalText = `${kls.batasBawah} - ${kls.batasAtas}`.padEnd(16);
     console.log(`| ${intervalText} | ${kls.frekuensi.toString().padEnd(9)}|`);
   });
-
   console.log("|------------------|-----------|");
+
   rl.close();
 });
