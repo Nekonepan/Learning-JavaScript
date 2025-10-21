@@ -6,12 +6,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-console.log("Masukkan data (pisahkan dengan spasi atau koma):");
+console.log("Masukkan data (pisahkan data dengan spasi):");
 
 rl.question("> ", (input) => {
   // PISAH INPUT MENJADI NUMBER
   const data = input
-    .split(/[ ,]+/)
+    .split(/[ ]+/)
     .map(Number)
     .filter((x) => !isNaN(x));
   // --------------------------
