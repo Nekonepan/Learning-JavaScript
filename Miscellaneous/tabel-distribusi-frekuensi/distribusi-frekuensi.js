@@ -36,7 +36,6 @@ for (let i = 0; i < k; i++) {
   batasBawah = batasAtas;
 }
 
-// Cetak hasil
 console.log("=== TABEL DISTRIBUSI FREKUENSI ===");
 console.log(`Jumlah data (n): ${n}`);
 console.log(`Data terkecil (min): ${min}`);
