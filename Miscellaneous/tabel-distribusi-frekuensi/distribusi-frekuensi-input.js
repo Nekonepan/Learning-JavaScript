@@ -75,7 +75,7 @@ rl.question("> ", (input) => {
   console.log(`   > i = ${range} / ${k} = ${iReal.toFixed(4)}`);
   console.log(`   > Setelah dibulatkan i = ${interval}`);
 
-  console.log("\n| Interval Kelas   | f | xᵢ (tengah) | f·xᵢ |");
+  console.log("\n| Interval Kelas   | f | xi (tengah) | f.xi |");
   console.log("|------------------|---|-------------|------|");
 
   let totalFx = 0;
@@ -120,8 +120,27 @@ rl.question("> ", (input) => {
   const median = L + ((N2 - F) / f) * i;
 
   console.log("\n=== NILAI STATISTIK ===");
-  console.log(`Mean   : ${mean.toFixed(2)}`);
-  console.log(`Median : ${median.toFixed(2)}`);
+  // RUMUS MEAN
+  console.log("\n MEAN (Rata-rata):");
+  console.log("   Rumus:  x̄ = Σ(f.xi) / Σf");
+  console.log(`   Σ(f.xi) = ${totalFx.toFixed(2)}`);
+  console.log(`   Σf = ${totalF}`);
+  console.log(`   x̄ = ${totalFx.toFixed(2)} / ${totalF} = ${mean.toFixed(2)}`);
+  console.log(`   Mean = ${mean.toFixed(2)}`);
+
+  // RUMUS MEDIAN
+  console.log("\n MEDIAN:");
+  console.log("   Rumus:  Me = L + ((N/2 - F) / f) . i");
+  console.log(`   L = ${L}`);
+  console.log(`   N = ${N}`);
+  console.log(`   F = ${F}`);
+  console.log(`   f = ${f}`);
+  console.log(`   i = ${i}`);
+  console.log(`   Me = ${L} + ((${N}/2 - ${F}) / ${f}) . ${i}`);
+  console.log(
+    `   Me = ${L} + ((${N2} - ${F}) / ${f}) . ${i} = ${median.toFixed(2)}`
+  );
+  console.log(`   Median = ${median.toFixed(2)}`);
 
   rl.close();
 });
