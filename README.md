@@ -41,7 +41,12 @@ git clone https://github.com/Nekonepan/Learning-JavaScript.git
 cd Learning-JavaScript
 ```
 
-3. Run any example file
+3. Install dependencies
+```
+npm install
+```
+
+4. Run any example file
 ```
 node filename.js
 ```
