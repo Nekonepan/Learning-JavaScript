@@ -7,6 +7,7 @@ This project is a Node.js-based application developed to analyze and compare the
 ## 📌 Main Features
 
 1. Implementation of three sorting algorithms:
+
 - Bubble Sort
 - Insertion Sort
 - Quick Sort
@@ -44,6 +45,18 @@ This project is a Node.js-based application developed to analyze and compare the
 2. Runtime Environment : Node.js
 3. File System Module : Built-in fs module
 4. Data Format : JSON
+
+---
+
+## 💻 System Specifications
+
+This performance test was conducted on the following system:
+
+- Operating System : Arch Linux  
+- Processor : 12th Gen Intel(R) Core(TM) i5-1235U 
+- RAM : 8 GB  
+- Storage : SSD 512 GB  
+- Runtime : Node.js v25.9.0
 
 ---
 
@@ -100,10 +113,10 @@ node main.js
 ## 📊 Example Output
 
 | Index | Data Size | Bubble Sort | Insertion Sort | Quick Sort |
-|-------|-----------|-------------|----------------|------------|
-| 0 | 1000 | 5.123 ms | 2.456 ms | 0.789 ms |
-| 1 | 2000 | 20.456 ms | 9.321 ms | 1.234 ms |
-| ... | ... | ... | ... | ... |
+| ----- | --------- | ----------- | -------------- | ---------- |
+| 0     | 1000      | 5.123 ms    | 2.456 ms       | 0.789 ms   |
+| 1     | 2000      | 20.456 ms   | 9.321 ms       | 1.234 ms   |
+| ...   | ...       | ...         | ...            | ...        |
 
 ---
 
@@ -134,8 +147,8 @@ From the experiment results:
 Institution : Universitas Ahmad Dahlan
 Course : Strategi Algoritma
 
-| Contributors | GitHub |
-|---|---|
+| Contributors        | GitHub                                    |
+| ------------------- | ----------------------------------------- |
 | Lutfan Alaudin Naja | [Nekonepan](https://github.com/Nekonepan) |
 
 If you find this project useful:
