@@ -4,18 +4,17 @@ const bubbleSort = require("./Bubble-Sort/bubble");
 const insertionSort = require("./Insertion-Sort/insertion");
 const quickSort = require("./Quick-Sort/quick");
 
-// function ukur waktu (pakai hrtime biar akurat)
+// function ukur waktu (ms)
 function measureTime(sortFunc, data) {
   let start = process.hrtime.bigint();
-  sortFunc([...data]); // clone
+  sortFunc([...data]); // clone biar fair
   let end = process.hrtime.bigint();
 
-  return Number(end - start) / 1e6; // ms
+  return Number(end - start) / 1e6;
 }
 
-// header tabel
-console.log("| DATA | BUBBLE | INSERTION | QUICK |");
-console.log("|------|--------|-----------|-------|");
+// array untuk tabel
+let results = [];
 
 for (let i = 1000; i <= 10000; i += 1000) {
   let data = JSON.parse(fs.readFileSync(`./Data/data_${i}.json`));
@@ -24,7 +23,12 @@ for (let i = 1000; i <= 10000; i += 1000) {
   let insertionTime = measureTime(insertionSort, data);
   let quickTime = measureTime(quickSort, data);
 
-  console.log(
-    `| ${i} | ${bubbleTime.toFixed(3)} ms | ${insertionTime.toFixed(3)} ms | ${quickTime.toFixed(3)} ms |`,
-  );
+  results.push({
+    DATA: i,
+    BUBBLE: bubbleTime.toFixed(3) + " ms",
+    INSERTION: insertionTime.toFixed(3) + " ms",
+    QUICK: quickTime.toFixed(3) + " ms",
+  });
 }
+
+console.table(results);
