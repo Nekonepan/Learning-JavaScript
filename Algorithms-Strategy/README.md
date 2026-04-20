@@ -145,6 +145,7 @@ From the experiment results:
 ## 🤝 Credits
 
 Institution : Universitas Ahmad Dahlan
+
 Course : Strategi Algoritma
 
 | Contributors        | GitHub                                    |
