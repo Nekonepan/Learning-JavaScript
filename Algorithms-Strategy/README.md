@@ -154,5 +154,7 @@ Course : Strategi Algoritma
 If you find this project useful:
 
 ⭐ Star the repository
+
 🛠️ Fork and experiment with other algorithms
+
 📬 Use it as reference for algorithm analysis
